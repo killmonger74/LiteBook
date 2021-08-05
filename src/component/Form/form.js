@@ -143,7 +143,6 @@ function Form({ currentid,setcurrentid}) {
                        {error && <div className='form-div' id='error'> Please Fill all the Fields</div> } 
                    
                </form>
-              {/* i have to add the popup using the eventhandler*/}
             </div>
         </div>
         </>
