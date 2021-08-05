@@ -1,6 +1,6 @@
 import React from 'react';
 const Footer=({user,keyref})=>{
-	console.log(user)
+	
 	return(
 		<footer className='footer' ref={keyref}>
 			<div><h5>all rights are reserved to LiteBook</h5></div>

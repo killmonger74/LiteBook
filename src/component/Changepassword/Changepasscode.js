@@ -35,7 +35,6 @@ function ChangePasscode(props)
     useEffect(() => {
        if(props.match.path=='/reset/change/:token')
        {
-            console.log(props.match.params.token)
              settoken(props.match.params.token)    
        }
     }, [])

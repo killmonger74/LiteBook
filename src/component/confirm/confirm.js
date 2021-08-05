@@ -6,12 +6,11 @@ import { confirmmail } from '../../action/user';
 import { connect } from 'react-redux';
 import Loader from '../Post/Loader';
 const Confirm = (props)=>{
-  console.log(props)
+  
     const history=useHistory();
     useEffect(() => {
        if(props.match.path=='/confirm/:code')
        {
-            console.log(props.match.params.code)
             props.confirm(props.match.params.code,history)
             
        }
@@ -23,7 +22,6 @@ const Confirm = (props)=>{
                 <h4>Please wait while we are confirming your token</h4>
                 
             </div>
-            {/* {(status=='verified')?<Link to={'/login'}>Please Login </Link>:null} */}
        </div>
     )
 }

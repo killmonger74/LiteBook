@@ -20,14 +20,12 @@ export const signup=(signupdata,history)=>async(dispatch,state)=>{
    } 
    catch (error) {
        let errm={error}
-       console.log(errm)
        let data=(errm.error.response?.data?.message)
        
       if(data===undefined)
           {
             data=errm.error.message;
           }
-       console.log(data)
        dispatch({type:'ERROR',payload:data});
    }
 }
@@ -49,16 +47,14 @@ export const signin=(signindata,history)=>async(dispatch,state)=>{   ///Email Va
     } 
     catch (error) {
          let errm={error}
-         console.log(errm);
          let data=(errm?.error?.response?.data?.message)
-           console.log(data)
+     
            if(data===undefined)
           {
             data=errm.error.message;
           }
-          console.log(data)
          dispatch({type:'ERROR',payload:data});
-         console.log(state);
+        
        
     }
 
@@ -73,7 +69,6 @@ export const confirmmail=(token,history)=>async(dispatch)=>{
     catch(error)
     { 
         let errm={error}
-        console.log(errm)
         let data=(errm?.error?.response?.data?.message);
         if(data===undefined || data==null)
         {
@@ -87,15 +82,13 @@ export const confirmmail=(token,history)=>async(dispatch)=>{
 export const sendlink=(data1)=>async(dispatch)=>{
     try
     {
-        console.log(data1)
         let {data}=await api.forgetpasscode(data1);
-        console.log(data);
+       
         dispatch({type:'POSTACTION',payload:data.message})
     }
     catch(error)
     {
         let errm={error}
-        console.log(errm)
         let data=(errm?.error?.response?.data?.message);
         if(data===undefined || data==null)
         {
@@ -107,16 +100,14 @@ export const sendlink=(data1)=>async(dispatch)=>{
 export const changepassword=(data1,history)=>async(dispatch)=>{
     try
     {
-        console.log(data1)
         let {data}=await api.changepasscode(data1);
-        console.log(data);
+       
         dispatch({type:'POSTACTION',payload:data.message})
         history.replace('/login')
     }
     catch(error)
     {
         let errm={error}
-        console.log(errm)
         let data=(errm?.error?.response?.data?.message);
         if(data===undefined || data==null)
         {

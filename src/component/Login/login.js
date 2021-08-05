@@ -40,11 +40,9 @@ function Login() {
         } catch (error) {
             alert("error Occured    ")
         }
-        console.log(data);
     }
     const failuregoogle=()=>{
         setgooglefailure(true);
-        console.log("Failed")
     }
     const [show,setshow]=useState(false);
     return (

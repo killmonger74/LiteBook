@@ -22,7 +22,6 @@ function Header({currentid,setcurrentid,screenLoading}) {
     const [user,setuser]=useState(JSON.parse(localStorage.getItem('memoriesuserprofile')));
     
     useEffect(()=>{
-      console.log(location)
         const token=JSON.parse(localStorage.getItem('memoriesuserprofile'))?.token;
 
         if(token){

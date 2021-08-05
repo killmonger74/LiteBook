@@ -6,16 +6,15 @@ export const getpost = (png) => async (dispatch,state)=>{
     try {
         
         dispatch({type:'LOADING'});
-        console.log(state())
+        
         const post=await api.fetch_data(png);
         dispatch({type:'FETCH_ALL',payload:post.data});
         dispatch({type:'DONELOADING'});
-        console.log(state())
+      
     }
      catch (error) 
     {
          let errm={error}
-         console.log(errm)
          let data=(errm?.error?.response?.data?.message);
          if(data===undefined || data==null)
          {
@@ -103,7 +102,7 @@ export const likepost= (id)=>async(dispatch)=>
 {
     try {
     const {data}= await api.likePost(id);
-    console.log(data)
+    
     dispatch({type:'LIKE',payload:data});
     } 
     catch (error) {
