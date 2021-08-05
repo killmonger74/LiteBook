@@ -3,7 +3,6 @@ import React,{useState,useEffect,lazy,Suspense} from 'react'
 import {Link,useLocation,useHistory} from 'react-router-dom'
 import {opendomportal} from '../../action/post'
 import {useDispatch} from 'react-redux';
-const Modal=lazy(()=>import('./Modal'))
 function Header({currentid,setcurrentid,screenLoading}) {
   
     const [visible,setvisible]=useState(false);
